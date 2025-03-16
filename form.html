@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submit Food</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+
+    <link rel="stylesheet/less" type="text/css" href="./style/styles.less" />
+    <script src="https://cdn.jsdelivr.net/npm/less"></script>
+</head>
+<body>
+    <div>
+        <a class="hamburger" href="#navbar">
+            <i class="fa-solid fa-bars"></i>
+        </a>
+        <nav id="navbar">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Chicago</a></li>
+                <li><a href="#">Submit Food</a></li>
+            </ul>
+            <a class="close" href="#">
+                <i class="fa-solid fa-xmark"></i>
+            </a>
+        </nav>
+    </div>
+
+    <header>
+        <h1>Submit Food</h1>
+
+        <p>Complete the form below to enter your Chicago food into our pool. Your submission has a chance to be featured on our home page!</p>
+    </header>
+
+    <form id="submitNewFood" method="get" action="#">
+        <label for="foodName">Food Name: </label>
+        <input
+            type="text"
+            id="foodName"
+            name="foodName"
+            placeholder="Pizza Puff"
+            size="25"
+            required
+            minlength="1"
+            maxlength="60"
+        />
+
+        <br /><br />
+        
+        <label class="textareaLabel" for="foodDescription">Food Description: </label>
+        <textarea
+            id="foodName"
+            name="foodName"
+            placeholder="A flaky, square...."
+        >
+        </textarea>
+
+        <br /><br />
+
+        <label class="textareaLabel" for="foodHistory">Food's History in Chicago: </label>
+        <textarea
+            id="foodHistory"
+            name="foodHistory"
+            placeholder="This is a staple food to the south side...."
+        >
+        </textarea>
+
+        <br /><br />
+
+        <fieldset>
+            <legend>From what side of Chicago does this food orginate?</legend>
+
+            <input
+                type="radio"
+                id="south"
+                name="sideOfChicago"
+                value="south"
+            />
+            <label for="south">South</label>
+            <br />
+
+            <input
+                type="radio"
+                id="east"
+                name="sideOfChicago"
+                value="east"
+            />
+            <label for="east">East</label>
+            <br />
+            
+            <input
+                type="radio"
+                id="west"
+                name="sideOfChicago"
+                value="west"
+            />
+            <label for="west">West</label>
+            <br />
+
+            <input
+                type="radio"
+                id="north"
+                name="sideOfChicago"
+                value="north"
+            />
+            <label for="north">North</label>
+        </fieldset>
+        
+        <br />
+
+        <fieldset>
+            <legend>Where is this food found?</legend>
+
+            <input
+                type="checkbox"
+                id="restaurants"
+                name="found"
+                value="restaurants"
+            />
+            <label for="restaurants">Restaurants</label>
+            <br/>
+
+            <input
+                type="checkbox"
+                id="gatherings"
+                name="found"
+                value="gatherings"
+            />
+            <label for="gatherings">Family/General Gatherings</label>
+            <br/>
+
+            <input
+                type="checkbox"
+                id="family"
+                name="found"
+                value="family"
+            />
+            <label for="family">Home Meals</label>
+            <br/>
+
+            <input
+                type="checkbox"
+                id="trucks"
+                name="found"
+                value="trucks"
+            />
+            <label for="trucks">Food Trucks/Street Food</label>
+        </fieldset>
+     
+        <br />
+        
+        <input type="submit" id="process" />
+    </form>
+
+    <footer>
+        <p>Visit Chicago and try native food for yourself!</p>
+    </footer>
+</body>
+</html>
